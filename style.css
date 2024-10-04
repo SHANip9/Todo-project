@@ -1,35 +1,88 @@
-body{
-    text-align: center;
-}
-
-.btn {
- height: 200px;
- width: 200px;
- border-radius: 20%;
- border: 10px solid black;
- margin: 2.5rem;
-}
-
-.btn-container {
+/* Basic styles for the body */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
     display: flex;
     justify-content: center;
-}
-.yellow{
-    background-color: rgb(217, 217, 61);
-}
-.red{
-    background-color: rgb(199, 114, 114);
-}
-.purple{
-    background-color: rgb(196, 113, 196);
-}
-.green{
-    background-color: rgb(6, 84, 6);
-}
-.flash{
-    background-color: aliceblue;
+    align-items: center;
+    overflow: hidden; /* To avoid scrollbars */
+    background: linear-gradient(270deg, #ff7e5f, #feb47b, #86a8e7, #91eae4);
+    background-size: 800% 800%;
+    animation: gradientAnimation 15s ease infinite; /* Animation for the gradient */
 }
 
-.userflash{
-    background-color: rgb(0, 255, 0);
+/* Gradient animation keyframes */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Container for the todo app */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff; /* Make text white to contrast with background */
+}
+
+input {
+    padding: 10px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    width: 250px;
+    font-size: 16px;
+    outline: none;
+    color: #333;
+}
+
+button {
+    padding: 10px 15px;
+    margin-left: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+li {
+    background-color: white;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+li:hover {
+    background-color: #f0f0f0;
+}
+
+li button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+li button:hover {
+    background-color: #c0392b;
 }
